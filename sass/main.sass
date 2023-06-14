@@ -1,0 +1,204 @@
+@use 'variables'
+@charset 'utf-8'
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  text-decoration: none
+
+html
+  font-size: 62.5%
+
+body
+  font-size: 1.6rem
+
+body *
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  color: variables.$text
+
+input
+  outline: 0
+
+.wrapper
+  display: grid
+  grid-template-columns: 1.5fr 3.5fr
+  height: 100vh
+  overflow: hidden
+
+.user-contact
+  font-size: 1.7rem
+  color: variables.$black
+  
+/* Contact-chat */
+.contact-chat
+  background-color: variables.$white
+  height: 100%
+
+  .perfil-bar
+    padding-inline: 1.6rem
+    height: 5.9rem
+
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    background-color: variables.$white-2
+
+    #profile
+      border-radius: 50%
+      width: 4rem
+      height: 4rem
+
+      border: .5px solid variables.$icon
+    
+    .tools
+      display: flex
+      align-items: center
+      column-gap: 1.6rem
+      
+      .tool-bar
+        width: 2.5rem
+        height: 2.5rem
+
+  .search-contact
+    background-color: variables.$white
+    height: 5rem
+
+    padding: 0.7rem 1.2rem
+
+    display: flex
+    align-items: center
+
+    .search-message
+      border-radius: 6px
+      padding: 7px 0 7px 12px
+      
+      background-color: variables.$white-2
+
+      display: flex
+      align-items: center
+      width: 100%
+
+      img
+        width: 10%
+        height: 20px
+      
+      input
+        border: none
+        margin-left: 2.4rem
+        width: 90%
+        background-color: transparent
+        padding-right: 8px
+      
+        &::placeholder
+          color: variables.$text
+          font-size: 1.4rem
+
+    > img
+      width: 2rem
+      height: 2rem
+      color: variables.$gray
+      margin-left: .8rem
+      border-radius: 50%
+
+  .conversation
+    overflow-y: scroll
+    height: 100%
+
+    background-color: variables.$white
+
+    &-chat
+      padding: 12px 15px
+
+      display: flex
+      align-items: center
+      gap: 15px
+
+      background-color: variables.$white
+
+      .conversation-interaction
+        flex-grow: 1
+
+        &-division
+          display: flex
+          justify-content: space-between
+
+          h3
+            font-size: 1.4rem
+            color: variables.$icon
+            font-weight: 400
+          
+          span
+            font-size: 1.2rem
+            color: variables.$gray-light
+
+/* Chat */
+.chat
+  background: variables.$black-2 url('../assets/wallpaper.png') no-repeat center center/cover
+  position: relative
+  max-height: 100vh
+
+  .conversation-data
+    padding: 10px 16px
+    background-color: variables.$white-2
+
+    height: 5.9rem
+
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    border-left: 1px solid variables.$border-color
+
+    .conversation-details
+      display: flex
+      align-items: center
+      gap: .5rem
+
+      > img
+        padding-right: 8px
+        border-radius: 50%
+
+      .name
+        display: flex
+        flex-direction: column
+
+        h3
+          font-weight: 400
+          font-size: 1.2rem
+          color: variables.$icon
+    
+    .icons-more
+      display: flex
+      align-items: center
+      gap: 16px
+  
+  .conversation-chat
+    position: absolute
+    right: 0
+    bottom: 0
+
+    width: 100%
+    padding: 5px 16px
+    background-color: variables.$white-2
+
+    display: flex
+    align-items: center
+    gap: 16px
+
+    input
+      padding: 16px
+      width: 100%
+
+      border-radius: 8px
+      border: .5px solid variables.$hover-card
+
+      &::placeholder
+        color: variables.$text
+        font-size: 1.5rem
+
+
+
+
+
